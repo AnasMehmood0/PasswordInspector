@@ -47,10 +47,10 @@ st.markdown("""
 
     /* Animation for the input field */
     .stTextInput input {
-        background-color: rgba(255, 255, 255, 0.1);
+        background: linear-gradient(135deg, #E1BEE7, #CE93D8);
         border: 2px solid #AB47BC;
         border-radius: 10px;
-        color: white;
+        color: #4A148C;
         padding: 10px;
         font-size: 16px;
         transition: all 0.3s ease;
@@ -120,8 +120,8 @@ st.markdown("""
             #### Examine, Strengthen, Protect: Password Inspector analyzes your passwords and provides expert recommendations to safeguard your digital identity.
             """)
 
-# Password input
-password = st.text_input("Enter your password", type="password", placeholder="Type your password here...")
+# Password input (visible, not hidden)
+password = st.text_input("Enter your password", type="default", placeholder="Type your password here...")
 
 # Initialize feedback list and score
 feedback = []
@@ -165,7 +165,7 @@ if st.button("Check Password 🔍"):
 
         # Display feedback
         if feedback:
-            st.markdown("### Password Analysis & Improvement Suggestions �:")
+            st.markdown("### Password Analysis & Improvement Suggestions:")
             for tip in feedback:
                 if "strong" in tip:
                     st.markdown(f'<div class="feedback-message strong">{tip}</div>', unsafe_allow_html=True)
