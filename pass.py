@@ -50,7 +50,7 @@ st.markdown("""
         background: linear-gradient(135deg, #E1BEE7, #CE93D8);
         border: 2px solid #AB47BC;
         border-radius: 10px;
-        color: #4A148C;
+        color: #000000; /* Black text color */
         padding: 10px;
         font-size: 16px;
         transition: all 0.3s ease;
