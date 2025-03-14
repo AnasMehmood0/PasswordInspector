@@ -120,8 +120,15 @@ st.markdown("""
             #### Examine, Strengthen, Protect: Password Inspector analyzes your passwords and provides expert recommendations to safeguard your digital identity.
             """)
 
-# Password input (visible, not hidden)
-password = st.text_input("Enter your password", type="default", placeholder="Type your password here...")
+# Toggle button to show/hide password
+show_password = st.checkbox("Show Password", value=True)
+
+# Password input (with privacy eye enabled)
+password = st.text_input(
+    "Enter your password",
+    type="default" if show_password else "password",  # Toggle between "default" and "password"
+    placeholder="Type your password here..."
+)
 
 # Initialize feedback list and score
 feedback = []
